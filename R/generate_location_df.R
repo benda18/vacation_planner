@@ -94,7 +94,7 @@ rm(list=ls());cat('\f')
 
 # Functions----
 
-gen_dest <- function(name, addr, desc, 
+gen_dest <- function(name, addr = NA, desc, 
                      lon = NA, lat = NA){
   require(dplyr)
   out <- data_frame(loc_name = as.character(name), 
@@ -139,6 +139,9 @@ map_dests <- rbind(gen_dest("NASA US Space and Rocket Center",
                             desc = "visit", 
                             lon = -86.65417, 
                             lat = 34.71139), 
+                   gen_dest("Toomer's Corner", 
+                            desc = "Iconic, murdered trees near Auburn University", 
+                            lon = -85.48169, lat = 32.60661),
                    gen_dest(name = "Edmund Pettus Bridge", 
                             addr = "Selma, AL", 
                             desc = "visit", 
@@ -165,17 +168,24 @@ map_cities <- rbind(gen_dest("Montgomery, AL",
                              desc = "city", 
                              lon = -84.3842, 
                              lat = 33.75563), 
-                    gen_dest("Montgomery, AL", desc = "city", 
-                             addr = NA, 
-                             lon = -86.05203, 
-                             lat = 32.3646), 
-                    gen_dest("Montgomery, AL", desc = "city", 
-                             addr = NA, 
-                             lon = -86.05203, 
-                             lat = 32.3646)
+                    # gen_dest("Montgomery, AL", desc = "city", 
+                    #          addr = NA, 
+                    #          lon = -86.05203, 
+                    #          lat = 32.3646), 
+                    gen_dest("Birmingham, AL", desc = "city",
+                             addr = NA,
+                             lon = -86.7548,
+                             lat = 33.50583),
+                    gen_dest("Huntsville, AL", desc = "city", 
+                             lon = -86.48078, lat = 34.76076),
+                    gen_dest("Selma, NC", desc = "city",
+                             lon = -87.04213, lat = 32.5173),
+                    gen_dest("Charlotte, NC", desc = "city",
+                             lon = -80.85885, 
+                             lat = 35.21265)
                     )
 
-censusxy::cxy_oneline("100 elm st, montgomery, al")[c("coordinates.x", 
+censusxy::cxy_oneline("100 N college st, auburn, al")[c("coordinates.x", 
                                                       "coordinates.y")]
 
 for(i in 1:nrow(map_dests)){
@@ -193,8 +203,8 @@ for(i in 1:nrow(map_dests)){
 
 leaflet() %>%
   addTiles() %>%
-  addMarkers(lng = map_dests$x, 
-             lat = map_dests$y, 
+  addMarkers(lng = map_dests$x,
+             lat = map_dests$y,
              label = map_dests$loc_name) %>%
   addCircleMarkers(lng = map_cities$x, 
              lat = map_cities$y, 
