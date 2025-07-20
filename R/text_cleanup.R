@@ -1971,9 +1971,44 @@ Bound Brook, NJ; Philadelphia, PA; Rodgers Tavern - Perryville, MD
 library(dplyr)
 
 nps_cancellations <- nps_cancellations %>%
-  strsplit(., "\n")
+  strsplit(., "\n") %>%
+  unlist()
 
 prop.table(table(unlist(lapply(nps_cancellations, nchar)) >= 2))
 
-state_names <- toupper(state.name)
 
+state_names <- toupper(state.name)
+state_names2 <- paste(state_names, ":", sep = "")
+
+
+grepl(pattern = state_names2 %>% 
+        paste(., sep = "|", collapse = "|"), 
+      x = nps_cancellations) %>% 
+  table()
+
+
+cur_state <- "high"
+for(i in 1:length(nps_cancellations)){
+  
+  # TRACK CURRENT STATE
+  # if on last line, print:
+  if(i == length(nps_cancellations)){
+    print("done")
+  }else{
+    # if a state name appears in the list, capitalized, with a colon (:) suffix
+      if(grepl(pattern = paste(state_names2, 
+                            sep = "|",
+                            collapse = "|"), 
+            x = nps_cancellations[i])){
+        #print(i)
+        #print(nps_cancellations[i])
+        #print("new state")
+        
+        # update variable
+        cur_state <- nps_cancellations[i]
+        
+      }
+    print(cur_state)
+  }
+  
+}
