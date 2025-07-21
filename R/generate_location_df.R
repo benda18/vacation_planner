@@ -4,17 +4,13 @@ renv::use(
   bslib             = "bslib@0.9.0",
   cachem            = "cachem@1.1.0",
   censusxy          = "chris-prener/censusxy@bdcb5141fe6a9dfc15c6b1fee6dde24376ef2bda",
-  class             = "class@7.3-22",
-  classInt          = "classInt@0.4-11",
   cli               = "cli@3.6.5",
   codetools         = "codetools@0.2-20",
   crosstalk         = "crosstalk@1.2.1",
   curl              = "curl@6.4.0",
-  DBI               = "DBI@1.2.3",
   digest            = "digest@0.6.37",
   doParallel        = "doParallel@1.0.17",
   dplyr             = "dplyr@1.1.4",
-  e1071             = "e1071@1.7-16",
   evaluate          = "evaluate@1.0.4",
   farver            = "farver@2.1.2",
   fastmap           = "fastmap@1.2.0",
@@ -30,7 +26,6 @@ renv::use(
   iterators         = "iterators@1.0.14",
   jquerylib         = "jquerylib@0.1.4",
   jsonlite          = "jsonlite@2.0.0",
-  KernSmooth        = "KernSmooth@2.23-24",
   knitr             = "knitr@1.50",
   labeling          = "labeling@0.4.3",
   lattice           = "lattice@0.22-6",
@@ -39,14 +34,12 @@ renv::use(
   leaflet.providers = "leaflet.providers@2.0.0",
   lifecycle         = "lifecycle@1.0.4",
   magrittr          = "magrittr@2.0.3",
-  MASS              = "MASS@7.3-61",
   memoise           = "memoise@2.0.1",
   mime              = "mime@0.13",
   openssl           = "openssl@2.3.3",
   pillar            = "pillar@1.11.0",
   pkgconfig         = "pkgconfig@2.0.3",
   png               = "png@0.1-8",
-  proxy             = "proxy@0.4-27",
   R6                = "R6@2.6.1",
   rappdirs          = "rappdirs@0.3.3",
   raster            = "raster@3.6-32",
@@ -55,26 +48,18 @@ renv::use(
   renv              = "renv@1.1.1",
   rlang             = "rlang@1.1.6",
   rmarkdown         = "rmarkdown@2.29",
-  s2                = "s2@1.1.9",
   sass              = "sass@0.4.10",
   scales            = "scales@1.4.0",
-  sf                = "sf@1.0-21",
   sp                = "sp@2.2-0",
-  stringi           = "stringi@1.8.7",
-  stringr           = "stringr@1.5.1",
   sys               = "sys@3.4.3",
   terra             = "terra@1.8-54",
   tibble            = "tibble@3.3.0",
   tidyselect        = "tidyselect@1.2.1",
-  tigris            = "tigris@2.2.1",
   tinytex           = "tinytex@0.57",
-  units             = "units@0.8-7",
   utf8              = "utf8@1.2.6",
-  uuid              = "uuid@1.2-1",
   vctrs             = "vctrs@0.6.5",
   viridisLite       = "viridisLite@0.4.2",
   withr             = "withr@3.0.2",
-  wk                = "wk@0.9.4",
   xfun              = "xfun@0.52",
   yaml              = "yaml@2.3.10"
 )
@@ -84,7 +69,7 @@ library(leaflet)
 # library(lubridate)
 library(censusxy)
 library(dplyr)
-library(tigris)
+# library(tigris)
 
 renv::snapshot()
 renv::embed()
@@ -201,7 +186,7 @@ On Saturday, drive from Asheville to Durham, NC."
 # vehicle type is 2019 chevrolet bolt ev. optimize the route for the shortest travel time
 
 
-recommend good record stores, bookstores, and skateparks along the way "
+
 
 
 # Locations----
