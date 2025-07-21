@@ -93,6 +93,12 @@ gen_dest <- function(name, addr = NA, desc,
 
 # chatgpt  prompts----
 
+df_hotels <- data.frame(city = c("Atlanta", 
+                                 "Montgomery", 
+                                 "birmingham", "huntsville", "asheville"), 
+                        dow = c("Monday", "Tuesday", "Wednesday", 
+                                "Thursday", "Friday"))
+
 gemini_all <- "plan a road trip. i'll be driving a 2019 chevrolet bolt ev with DC fast charging. 
 
 Depart Durham NC at 9am on July 21st, 2025.  
