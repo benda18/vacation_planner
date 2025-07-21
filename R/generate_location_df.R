@@ -104,14 +104,14 @@ gemini_all <- "plan a road trip. i'll be driving a 2019 chevrolet bolt ev with D
 Depart Durham NC at 9am on July 21st, 2025.  
 Spend 2 hours at carowinds 
 arrive in atlanta, GA near the georgia aquarium.
-stay at a hotel overnight. 
+stay at Hampton Inn Atlanta-Northlake, 3400 Northlake Pkwy NE, Atlanta, GA 30345. 
 
 
 On Tuesday, depart the hotel around 9am. 
 Visit the georgia aquarium. 
 visit Six Flags Over Georgia for 2-3 hours. 
 Drive to Toomer's Corner in Auburn, Al.  Have a meal in Auburn. 
-Drive to Montgomery, Al.  Stay in a hotel in Montgomery. 
+Drive to Montgomery, Al.  Stay in Wingate by Wyndham Montgomery, . 
 
 On Wednesday, visit the civil rights meorial in montgomery. 
 visit the national memorial for peace and justice.
@@ -130,7 +130,9 @@ along the way, stop at the unclaimed luggage store at 509 W Willow St, Scottsbor
 Along the way, drive the tail of the dragon and stop at deal's gap motorcycle resort for 30 minutes.
 Stay in a hotel in Asheville.
 
-On Saturday, drive from Asheville to Durham, NC."
+On Saturday, drive from Asheville to Durham, NC.
+
+Recommend good book stores and skateboarding locations along the way."
 
 
 # gpt_monday <- "plan a road trip.  
