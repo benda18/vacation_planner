@@ -99,7 +99,7 @@ df_hotels <- data.frame(city = c("Atlanta",
                         dow = c("Monday", "Tuesday", "Wednesday", 
                                 "Thursday", "Friday"))
 
-gemini_all <- "plan a road trip. i'll be driving a 2019 chevrolet bolt ev with DC fast charging. 
+gemini_all <- "plan a road trip. i'll be driving a 2019 chevrolet bolt ev with DC fast charging. please do not include specific charging locations in the itenirary. 
 
 Depart Durham NC at 9am on July 21st, 2025.  
 Spend 2 hours at carowinds 
